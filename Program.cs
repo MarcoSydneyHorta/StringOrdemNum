@@ -9,12 +9,14 @@ namespace StringOrdemNum
             Console.WriteLine("Enter names with concatenated number, separated by space");
             Console.Write("For example: manoel4 renata6 paulo5 ari1 claudia3 beatriz2 : ");
             // output: "ari beatriz claudia manoel paulo renata"
-            string[] ent = Console.ReadLine().Split(" ");
-            Console.Write("Output: " + Uncoordinated(ent));
+            string names = Console.ReadLine();
+            string[] ent = names.Split(" ");
+            Console.Write("Output: " + Uncoordinated(names));
         }
 
-        static string Uncoordinated(string[] unordered)
+        static string Uncoordinated(string names)
         {
+            string[] unordered = names.Split(" ");
             string outputed = "";
             int lastchar = 0;
             int tams = 0;
